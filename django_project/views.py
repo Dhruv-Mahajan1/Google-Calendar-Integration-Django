@@ -5,8 +5,9 @@ from google_auth_oauthlib.flow import Flow
 from googleapiclient.discovery import build
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .config import CLIENT_SECRET_PATH
 
-CLIENT_SECRET_FILE = 'django_project/client_secret.json'
+CLIENT_SECRET_FILE = CLIENT_SECRET_PATH
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 API_SERVICE_NAME = 'calendar'
 API_VERSION = 'v3'
